@@ -1,5 +1,7 @@
 HPDIC MOD
 =========
+* Setup on CloudLab (11/3/2025):
+
 * Steup on ChameleonCloud (5/16/2025):
     * Update system
         ```
