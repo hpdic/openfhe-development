@@ -1,6 +1,17 @@
 HPDIC MOD
 =========
 * Setup on CloudLab (11/3/2025):
+    * Prepare the system
+        ```
+        sudo apt update
+        ssh-keygen
+        ```
+        Upload the public key to Github
+    * Check out the code
+        ```
+        git clone git@github.com:hpdic/openfhe-development.git
+        ```
+    * TODO
 
 * Steup on ChameleonCloud (5/16/2025):
     * Update system
