@@ -3,15 +3,33 @@ HPDIC MOD
 * Setup on CloudLab (11/3/2025):
     * Prepare the system
         ```
+        cd
         sudo apt update
+        sudo apt install cmake -y
+        sudo apt install zlib1g-dev
         ssh-keygen
         ```
         Upload the public key to Github
-    * Check out the code
+    * Install cnpy
         ```
+        cd
+        git clone https://github.com/hpdic/cnpy.git
+        cd ~/cnpy
+        mkdir build && cd build
+        cmake ..
+        make -j 16
+        sudo make install
+        ```
+    * Install openFHE
+        ```
+        cd
         git clone git@github.com:hpdic/openfhe-development.git
+        cd ~/github/openfhe-development
+        mkdir build && cd build
+        cmake ..
+        make -j 16
+        sudo make install 
         ```
-    * TODO
 
 * Steup on ChameleonCloud (5/16/2025):
     * Update system
