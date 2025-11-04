@@ -1,6 +1,6 @@
 HPDIC MOD
 =========
-* Setup on CloudLab (11/3/2025):
+* Setup on CloudLab, Ubuntu-24 (11/3/2025):
     * Prepare the system
         ```
         cd
@@ -30,7 +30,11 @@ HPDIC MOD
         make -j 16
         sudo make install 
         ```
-
+    * Test OpenFHE
+        ```
+        cd ~/openfhe-development/build
+        ./bin/examples/pke/simple-integers
+        ```
 * Steup on ChameleonCloud (5/16/2025):
     * Update system
         ```
