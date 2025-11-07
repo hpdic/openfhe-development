@@ -7,6 +7,7 @@ HPDIC MOD
         sudo apt update
         sudo apt install cmake -y
         sudo apt install zlib1g-dev
+        sudo apt install gdb -y
         ssh-keygen
         ```
         Upload the public key to Github
@@ -26,14 +27,17 @@ HPDIC MOD
         git clone git@github.com:hpdic/openfhe-development.git
         cd ~/github/openfhe-development
         mkdir build && cd build
-        cmake ..
+        cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS_DEBUG="-g -O0" -DBUILD_UNITTESTS=OFF ..
         make -j 16
-        sudo make install 
         ```
     * Test OpenFHE
         ```
         cd ~/openfhe-development/build
         ./bin/examples/pke/simple-integers
+        ```
+    * Debug OpenFHE on VSCode
+        ```
+        cp -r ~/openfhe-development/vscode_setup ~/.vscode
         ```
 * Steup on ChameleonCloud (5/16/2025):
     * Update system

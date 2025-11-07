@@ -71,10 +71,13 @@ template <typename Element>
 void CryptoContextImpl<Element>::EvalMultKeyGen(const PrivateKey<Element> key) {
     ValidateKey(key);
 
+    // std::cerr << "HPDIC: " << __LINE__ << std::endl;
+
     if (CryptoContextImpl<Element>::s_evalMultKeyMap.find(key->GetKeyTag()) ==
         CryptoContextImpl<Element>::s_evalMultKeyMap.end()) {
         // the key is not found in the map, so the key has to be generated
         EvalKey<Element> k                                           = GetScheme()->EvalMultKeyGen(key);
+        // std::cerr << "HPDIC: k = " << k << std::endl;
         CryptoContextImpl<Element>::s_evalMultKeyMap[k->GetKeyTag()] = {k};
     }
 }
