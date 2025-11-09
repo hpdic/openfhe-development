@@ -18,7 +18,7 @@ HPDIC MOD
         cd ~/cnpy
         mkdir build && cd build
         cmake ..
-        make -j 16
+        make -j$(nproc)
         sudo make install
         ```
     * Install openFHE
@@ -28,7 +28,8 @@ HPDIC MOD
         cd ~/github/openfhe-development
         mkdir build && cd build
         cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS_DEBUG="-g -O0" -DBUILD_UNITTESTS=OFF ..
-        make -j 40
+        make -j$(nproc)
+        sudo make install
         ```
     * Test OpenFHE
         ```
