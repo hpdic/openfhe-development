@@ -25,7 +25,7 @@ HPDIC MOD
         ```
         cd
         git clone git@github.com:hpdic/openfhe-development.git
-        cd ~/github/openfhe-development
+        cd ~/openfhe-development
         mkdir build && cd build
         cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS_DEBUG="-g -O0" -DBUILD_UNITTESTS=OFF ..
         make -j$(nproc)
